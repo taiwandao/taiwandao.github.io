@@ -74,7 +74,7 @@
 						<li>Links</li>
 						
 						
-						<li>Über</li>
+						<li>About</li>
 						
 					</ul>
 				</div>
@@ -194,65 +194,6 @@
 </nav>
 
       <div class="body-wrap">
-  
-    <article id="post-android混淆文件说明" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/08/17/android混淆文件说明/" class="article-date">
-  	<time datetime="2016-08-17T06:55:44.000Z" itemprop="datePublished">2016-08-17</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/17/android混淆文件说明/">android混淆文件说明</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong><em>dump.txt</em></strong><br>介绍了APK中所有的class文件的内部结构<em>。<br>**</em>mapping.txt<strong><em><br>提供原文件对应混淆后的类、方法和字段名称。
-</em></strong>seeds.txt<strong><em><br>列出没有混淆的类和成员。
-</em></strong>usage.txt<em>**<br>列出从apk中删除的代码</em></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android-混淆/">android 混淆</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
   
     <article id="post-Espresso 自动化测试框架介绍" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -376,6 +317,65 @@
 
 
   
+    <article id="post-android混淆文件说明" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/08/17/android混淆文件说明/" class="article-date">
+  	<time datetime="2016-08-17T06:55:44.000Z" itemprop="datePublished">2016-08-17</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/08/17/android混淆文件说明/">android混淆文件说明</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong><em>dump.txt</em></strong><br>介绍了APK中所有的class文件的内部结构<em>。<br>**</em>mapping.txt<strong><em><br>提供原文件对应混淆后的类、方法和字段名称。
+</em></strong>seeds.txt<strong><em><br>列出没有混淆的类和成员。
+</em></strong>usage.txt<em>**<br>列出从apk中删除的代码</em></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android-混淆/">android 混淆</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-markdown如何添加代码块" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -405,7 +405,11 @@
         <p>只有在MarkDown编辑器下，才可以添加代码块</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/2161684-3830f21fd4c8cd8e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
 <p><strong>粗体</strong><br><strong><em>斜体</em></strong><br><strong><em><del>删除线</del></em></strong><br><strong><em><del>引用</del></em></strong></p>
-<p>标题1<br>标题2<br>标题3<br>标题4<br><a href="http://www.sina.com/" target="_blank" rel="external">新浪</a></p>
+<pre><code>#标题1
+##标题2
+###标题3
+####标题4
+</code></pre><p><a href="http://www.sina.com/" target="_blank" rel="external">新浪</a></p>
 <p>在代码块前后输入英文的<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">```</div><div class="line">hello</div></pre></td></tr></table></figure></p>
 <p>如下图</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/2161684-38d1871210f909f6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
@@ -466,11 +470,16 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>因第三方系统对后台推送进程的限制，部分国产手机会出现收不到推送，推送延迟时间长，这种情况需要用户手动操作</p>
-<p>#小米【MIUI】<br>自启动管理：需要把应用加到【自启动管理】列表，否则杀进程或重新开机后进程无法开启<br>通知栏设置：应用默认都是显示通知栏通知，如果关闭，则收到通知也不会提示<br>网络助手：可以手动禁止已安装的第三方程序访问2G/3G和WIFI的网络和设置以后新安装程序是否允许访问2G/3G和WIFI的网络<br>MIUI 7 神隐模式：允许应用进行自定义配置模式，应用在后台保持联网可用，否则应用进入后台时，应用无法正常接收消息。【设置】下电量和性能中【神隐模式】</p>
-<p>#华为【Emotion】<br>自启动管理：需要把应用加到【自启动管理】列表，否则杀进程或重新开机后进程不会开启，只能手动开启应用<br>后台应用保护：需要手动把应用加到此列表，否则设备进入睡眠后会自动杀掉应用进程，只有手动开启应用才能恢复运行<br>通知管理：应用状态有三种：提示、允许、禁止。禁止应用则通知栏不会有任何提醒</p>
-<p>#魅族【Flyme】<br>自启动管理：需要把应用加到【自启动管理】列表，否则杀进程或重新开机后进程无法开启<br>通知栏推送：关闭应用通知则收到消息不会有任何展示<br>省电管理：安全中心里设置省电模式，在【待机耗电管理】中允许应用待机时，保持允许，否则手机休眠或者应用闲置一段时间，无法正常接收消息。</p>
-<p>#VIVO【Funtouch OS】<br>内存一键清理：需要将应用加入【白名单】列表，否则系统自带的“一键加速”，会杀掉进程<br>自启动管理：需要将应用加入“i管家”中的【自启动管理】列表，否则重启手机后进程不会自启。但强制手动杀进程，即使加了这个列表中，后续进程也无法自启动。</p>
-<p>#OPPO【ColorOS】<br>冻结应用管理：需要将应用加入纯净后台，否则锁屏状态下无法及时收到消息<br>自启动管理：将应用加入【自启动管理】列表的同时，还需要到设置-应用程序-正在运行里锁定应用进程，否则杀进程或者开机后进程不会开启，只能手动开启应用</p>
+<pre><code>#小米【MIUI】
+</code></pre><p>自启动管理：需要把应用加到【自启动管理】列表，否则杀进程或重新开机后进程无法开启<br>通知栏设置：应用默认都是显示通知栏通知，如果关闭，则收到通知也不会提示<br>网络助手：可以手动禁止已安装的第三方程序访问2G/3G和WIFI的网络和设置以后新安装程序是否允许访问2G/3G和WIFI的网络<br>MIUI 7 神隐模式：允许应用进行自定义配置模式，应用在后台保持联网可用，否则应用进入后台时，应用无法正常接收消息。【设置】下电量和性能中【神隐模式】</p>
+<pre><code>#华为【Emotion】
+</code></pre><p>自启动管理：需要把应用加到【自启动管理】列表，否则杀进程或重新开机后进程不会开启，只能手动开启应用<br>后台应用保护：需要手动把应用加到此列表，否则设备进入睡眠后会自动杀掉应用进程，只有手动开启应用才能恢复运行<br>通知管理：应用状态有三种：提示、允许、禁止。禁止应用则通知栏不会有任何提醒</p>
+<pre><code>#魅族【Flyme】
+</code></pre><p>自启动管理：需要把应用加到【自启动管理】列表，否则杀进程或重新开机后进程无法开启<br>通知栏推送：关闭应用通知则收到消息不会有任何展示<br>省电管理：安全中心里设置省电模式，在【待机耗电管理】中允许应用待机时，保持允许，否则手机休眠或者应用闲置一段时间，无法正常接收消息。</p>
+<pre><code>#VIVO【Funtouch OS】
+</code></pre><p>内存一键清理：需要将应用加入【白名单】列表，否则系统自带的“一键加速”，会杀掉进程<br>自启动管理：需要将应用加入“i管家”中的【自启动管理】列表，否则重启手机后进程不会自启。但强制手动杀进程，即使加了这个列表中，后续进程也无法自启动。</p>
+<pre><code>#OPPO【ColorOS】
+</code></pre><p>冻结应用管理：需要将应用加入纯净后台，否则锁屏状态下无法及时收到消息<br>自启动管理：将应用加入【自启动管理】列表的同时，还需要到设置-应用程序-正在运行里锁定应用进程，否则杀进程或者开机后进程不会开启，只能手动开启应用</p>
 
       
     </div>
