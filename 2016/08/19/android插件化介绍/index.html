@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>android插件化介绍 | brian&#39;s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="#插件化是什么？说到插件化，其实在我们生活是很常见，比如u盘，用的时候插上，不用的时候拔下，任何品牌的u盘都可以插在电脑上，无线鼠标，无线键盘，外界屏幕等等，这些都是插件化的例子。
+那么android中的插件化技术，目前已经比较成熟，比如微信，淘宝，携程，360手机助手中都应用到了插件化。他的特点是无需单独安装apk，即可运行，即插即用，无需升级宿主应用，减少app的更新频率，除此之外他还可以降低">
+<meta property="og:type" content="article">
+<meta property="og:title" content="android插件化介绍">
+<meta property="og:url" content="http://yoursite.com/2016/08/19/android插件化介绍/index.html">
+<meta property="og:site_name" content="brian's blog">
+<meta property="og:description" content="#插件化是什么？说到插件化，其实在我们生活是很常见，比如u盘，用的时候插上，不用的时候拔下，任何品牌的u盘都可以插在电脑上，无线鼠标，无线键盘，外界屏幕等等，这些都是插件化的例子。
+那么android中的插件化技术，目前已经比较成熟，比如微信，淘宝，携程，360手机助手中都应用到了插件化。他的特点是无需单独安装apk，即可运行，即插即用，无需升级宿主应用，减少app的更新频率，除此之外他还可以降低">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2161684-7c6cf706e6464183.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2016-08-19T03:26:21.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="android插件化介绍">
+<meta name="twitter:description" content="#插件化是什么？说到插件化，其实在我们生活是很常见，比如u盘，用的时候插上，不用的时候拔下，任何品牌的u盘都可以插在电脑上，无线鼠标，无线键盘，外界屏幕等等，这些都是插件化的例子。
+那么android中的插件化技术，目前已经比较成熟，比如微信，淘宝，携程，360手机助手中都应用到了插件化。他的特点是无需单独安装apk，即可运行，即插即用，无需升级宿主应用，减少app的更新频率，除此之外他还可以降低">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/2161684-7c6cf706e6464183.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+  
+    <link rel="alternative" href="/atom.xml" title="brian&#39;s blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="//favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="nullhttp://a.hiphotos.baidu.com/baike/w%3D268%3Bg%3D0/sign=27077a5a442309f7e76faa144a356bce/9e3df8dcd100baa1a55c28754510b912c9fc2e8f.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Brian.Hou</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">台湾岛、钓鱼岛、黄岩岛都是中国的</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						<li>Links</li>
+						
+						
+						<li>Über</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/tags/随笔">随笔</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="#" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/android-lambda/" style="font-size: 10px;">android lambda</a> <a href="/tags/android-mac-react-native/" style="font-size: 10px;">android mac react-native</a> <a href="/tags/android-推送-国产推送-push/" style="font-size: 10px;">android 推送 国产推送 push</a> <a href="/tags/android-插件化/" style="font-size: 10px;">android 插件化</a> <a href="/tags/android-混淆/" style="font-size: 10px;">android 混淆</a> <a href="/tags/espresso-android-自动化测试/" style="font-size: 10px;">espresso android 自动化测试</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://qinjiangbo.github.io/">秦江波的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Brian.Hou</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img lazy-src="nullhttp://a.hiphotos.baidu.com/baike/w%3D268%3Bg%3D0/sign=27077a5a442309f7e76faa144a356bce/9e3df8dcd100baa1a55c28754510b912c9fc2e8f.jpg" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Brian.Hou</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">台湾岛、钓鱼岛、黄岩岛都是中国的</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/tags/随笔">随笔</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="#" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-android插件化介绍" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/08/19/android插件化介绍/" class="article-date">
+  	<time datetime="2016-08-19T03:25:44.000Z" itemprop="datePublished">2016-08-19</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      android插件化介绍
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android-插件化/">android 插件化</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#插件化是什么？<br>说到插件化，其实在我们生活是很常见，比如u盘，用的时候插上，不用的时候拔下，任何品牌的u盘都可以插在电脑上，无线鼠标，无线键盘，外界屏幕等等，这些都是插件化的例子。</p>
+<p>那么android中的插件化技术，目前已经比较成熟，比如微信，淘宝，携程，360手机助手中都应用到了插件化。他的特点是无需单独安装apk，即可运行，即插即用，无需升级宿主应用，减少app的更新频率，除此之外他还可以降低模块耦合，按需加载，节省流量等特点。</p>
+<p>拿我们自己的考试app举例，我们的app主要做英语考试，那么英语考试分很多种，sat、toefl、ielts考试题目呈现方式都不相同，有的学生需要sat，有的学生需要sat、toefl，目前的解决方案是每个考试都是一个单独app成了很多功能的耦合。</p>
+<p>为了解决这种问题，考虑引入插件化技术，按需引入所需考试类型的安装包。</p>
+<p>#介绍名词</p>
+<p>插件化 – apk 分为宿主和插件部分，插件在需要的时候才加载进来</p>
+<p>热修复 – 更新的类或者插件粒度较小的时候，我们会称之为热修复，一般用于修复bug</p>
+<p>热更新 – 2016 Google 的 Android Studio 推出了Instant Run 功能 同时提出了3个名词</p>
+<p>“热部署” – 方法内的简单修改，无需重启app和Activity。 “暖部署” – app无需重启，但是activity需要重启，比如资源的修改。 “冷部署” – app需要重启，比如继承关系的改变或方法的签名变化等。</p>
+<p>所以站在app开发者角度的“热”是指在不发版的情况来实现更新，而Google提出的“热”是指值是否需要重新启动。 同时在开发插件化的时候也有两种情景，一种是插件与宿主apk没有交互，只是在用户使用到的时候进行一次吊起，还有一种是与宿主有很多的交互。</p>
+<p>##基本原理<br>插件化的原理实际是 Java ClassLoader 的原理，看其他资料前请先看：<a href="http://www.trinea.cn/android/java-loader-common-class/" target="_blank" rel="external">Java ClassLoader基础</a>  </p>
+<p>###Java类加载器<br><strong><em>Android应用程序的.java文件在编译期会通过javac命令编译成.class文件，最后再把所有的.class文件编译成.dex文件放在.apk包里面。那么动态加载就是在运行时vm把插件apk直接加载到classloader里面的技术</em></strong></p>
+<p>###反射原理<br><strong><em>主要是指程序可以访问，检测和修改它本身状态或行为的一种能力，并能根据自身行为的状态和结果，调整或修改应用所描述行为的状态和相关的语义</em></strong></p>
+<p>###代理模式及Java实现动态代理<br><strong><em>定义：给某个对象提供一个代理对象，并由代理对象控制对于原对象的访问，即客户不直接操控原对象，而是通过代理对象间接地操控原对象。</em></strong></p>
+<p>#为什么用？</p>
+<p>##65535方法数天花板<br>随着业务的不断发展，外部库的引入，导致方法数的增加，应用中的Dex 文件方法数超过了最大值65536的上限，就会引爆android系统。这种情况可以通过削减重复方法数来治标，也有谷歌官方在<strong>API 21</strong>中提供了通用的解决方案，那就是<strong>android-support-multidex.jar</strong>. 这个jar包最低可以支持到<strong>API 4</strong>的版本(<strong>Android L</strong>及以上版本会默认支持<strong>mutidex</strong>)，同时插件化也是解决方案的一种。</p>
+<p>##减少主包大小</p>
+<p>##编译提速</p>
+<p>##可选模块按需下载<br>​例如模块可以在需要时进行加载，减少App Size，如只用到sat就只下载sat，只用toefl就只下载toefl的插件</p>
+<p>##并行开发，独立Testing<br>可以独立开发A、B版本的模块，而不是将A、B版本代码写在同一个模块中。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2161684-7c6cf706e6464183.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="app架构"></p>
+<p>##崩溃隔离<br>某一插件的崩溃，影响仅局限当前插件，不会导致其他插件以及宿主的崩溃</p>
+<p>#有什么限制？</p>
+<p>##通知栏限制<br>无法在插件中发送具有自定义资源的Notification，例如： a.  带自定义RemoteLayout的Notification b.  图标通过R.drawable.XXX指定的通知（插件系统会自动将其转化为Bitmap）</p>
+<p>##系统适配<br>Dex的加载与系统版本依赖严重，可能会导致新版SDK不支持等问题</p>
+<p>##需要预先注册权限<br>宿主的权限要多于插件的权限, 否则会权限不足，无法在插件中注册一些具有特殊Intent Filter的Service、Activity、BroadcastReceiver、ContentProvider等组件以供Android系统、已经安装的其他APP调用。</p>
+<p>##国外资料少的原因<br>国外andrid以及所有app应用都上传google play store或apple store,这两个市场的审核较为严格，不经审核的热更新的应用很容易被下架</p>
+<p>#限制解决办法</p>
+<p>##占坑<br>对于service，ContentProvider需要提前在宿主注册</p>
+<p>##自己实现包管理服务PMS</p>
+<p>##使用方法与原生方式差异大<br>写一个“正常”的模块和写一个动态加载模块，写法是不一样的，插件内部对资源的访问只能通过自己定义的方式，包括对layout文件的inflate等，使用getResouces的方式，分分钟crash给你看，而且内部实现有些复杂，容易出现莫名其妙的</p>
+<p>已有插件化框架对比<br><a href="https://github.com/Qihoo360/DroidPlugin" target="_blank" rel="external">360 DroidPlugin</a><br>是360手机助手在Android系统上实现了一种新的插件机制，多进程实现，更新插件时，真正热更新. 后面会针对DroidPlugin详细学习</p>
+<p><a href="https://github.com/singwhatiwanna/dynamic-load-apk" target="_blank" rel="external">DL 动态加载框架</a></p>
+<p><a href="https://github.com/bunnyblue/ACDD" target="_blank" rel="external">阿里ACCD（原OpenAtlas）</a><br>非代理Android动态部署框架</p>
+<p><a href="https://github.com/CtripMobile/DynamicAPK" target="_blank" rel="external">携程 DynamicAPK</a><br>实现Android App多apk插件化和动态加载，支持资源分包和热修复.携程App的插件化和动态加载框架.</p>
+<p>#未来趋势<br>插件化作为近几年比较火的技术，有他的适用场景，但是有很大的局限性，在扩展性，适应性方面都赶不上react-native，未来的趋势还是移动web化更占优势</p>
+<p>#其他资料<br><a href="http://mp.weixin.qq.com/s?__biz=MzA3ODg4MDk0Ng==&amp;mid=2651112099&amp;idx=1&amp;sn=4f6f16f045ea80ce10bad67b85b10a7d#rd" target="_blank" rel="external">包建强：android插件化从入门到放弃</a></p>
+<p><a href="http://www.tuicool.com/articles/7VF3Mf" target="_blank" rel="external">蘑菇街Android组件与插件化</a></p>
+<p><a href="https://github.com/SpikeKing/wcl-droid-plugin-demo" target="_blank" rel="external">使用DroidPlugin的示例</a></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/08/19/mac下搭建react-native-android环境/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">mac下搭建react-native-android环境</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+<div class="share_addthis">
+  <div class="sharing addthis_toolbox share">
+    <a class="addthis_button_facebook_like"></a>
+    <a class="addthis_button_tweet"></a>
+    <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+    <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-560c64c35486b3d4" async="async"></script>
+</div>
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="android插件化介绍" data-title="android插件化介绍" data-url="http://yoursite.com/2016/08/19/android插件化介绍/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 Brian.Hou
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: /
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
